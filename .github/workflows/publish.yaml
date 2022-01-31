@@ -1,0 +1,22 @@
+name: Build, test and deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
+    steps:
+      - uses: volta-cli/action@v1
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/npm-auth
+        with:
+          npm-token: ${{ secrets.NPM_TOKEN }}
+      - run: npm ci
+      - run: npm publish
