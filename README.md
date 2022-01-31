@@ -1,4 +1,4 @@
-# online-renovate-config
+# renovate-config
 
 This repository contains the renovate configuration for all repositories of the online-block team. It should be used by all repository to have a consistent automatic dependency management.
 
