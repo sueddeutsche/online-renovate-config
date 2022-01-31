@@ -7,15 +7,6 @@ This repository contains the renovate configuration for all repositories of the 
 1. Reference it in your `renovate.json`:
 ```
 {
-  "extends": ["@technik-sde"]
+  "extends": ["github>sueddeutsche/renovate-config"]
 }
 ```
-
-## Publishing
-
-1. Bump the version via:
-```
-npm version major|minor|patch
-```
-
-2. Commit and Push it to the main Branch (via PR), it will be published via GitHub action pipeline
