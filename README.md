@@ -7,6 +7,6 @@ This repository contains the renovate configuration for all repositories of the 
 1. Reference it in your `renovate.json`:
 ```
 {
-  "extends": ["github>sueddeutsche/renovate-config"]
+  "extends": ["github>sueddeutsche/online-renovate-config"]
 }
 ```
