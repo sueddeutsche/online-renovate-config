@@ -1,9 +1,5 @@
 {
-  "extends": [
-    "config:base",
-    "group:allNonMajor",
-    "schedule:earlyMondays",
-  ],
+  "extends": ["config:base", "group:allNonMajor", "schedule:earlyMondays"],
   "commitMessagePrefix": "chore: [{{{prettyDepType}}}]",
   "commitMessageExtra": "from v{{{currentVersion}}} to {{#if isMajor}}v{{{newMajor}}}{{else}}{{#if isSingleVersion}}v{{{newVersion}}}{{else}}{{{newValue}}}{{/if}}{{/if}}",
   "encrypted": {
@@ -12,7 +8,7 @@
   "packageRules": [
     {
       "matchPackageNames": ["node", "@types/node"],
-      "allowedVersions": "^14"
+      "allowedVersions": "/^14\\..*/"
     }
   ]
 }
