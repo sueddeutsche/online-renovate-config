@@ -2,14 +2,17 @@
   "extends": [
     "config:base",
     "group:allNonMajor",
-    "schedule:nonOfficeHours",
-    ":automergeMinor",
-    ":automergeRequireAllStatusChecks",
-    ":automergeBranch"
+    "schedule:earlyMondays",
   ],
   "commitMessagePrefix": "chore: [{{{prettyDepType}}}]",
   "commitMessageExtra": "from v{{{currentVersion}}} to {{#if isMajor}}v{{{newMajor}}}{{else}}{{#if isSingleVersion}}v{{{newVersion}}}{{else}}{{{newValue}}}{{/if}}{{/if}}",
   "encrypted": {
     "npmToken": "wcFMA/xDdHCJBTolAQ/+KDBP65/rdMYviPrRGXMlMMRz71WbW1AyHsiKfq0IvudDrL/Xewbco2v0fcLxeJ4M1ITX3HOtxdKVvnIrYGkF7iQFmRRkCiybbg3ZL3e4gSiWN75ky3V82boT3St5+oJatMtquY01rYeagk8QTKDaj33Oj9y+BLIkU5kOl3XiyQBfk8OX2IBbn8JR0FBPvdm58S2RTpiMX+1S0hTLqsYoFUsWeqYKlpPpsH+NLvAJPwTAy8AXc9wfCkLjKp/rPEeq9N6odihTedKg97vtz/h3uqwFiV5LdGlQDoRe6uJh210ZsfzZ3mmkFTIdHEI8fp9KWgvuCBzslPqZ/kJgKKgqMOHaNnXdG1UznO62uPzak7Zp/R8O+evrdnBIMHCYR4FMloZ/DpI2YVk/4vQ/z+QJvgwp8VtpZ9uYnUZFhVzoUwFhoAYI6At3ILyCFh90EFp7OydVwmvhEUrEhLlfteVEEFvfUZrVmqHX7IUxo8hYWJlKC8PhQWQxM+N87K6e1GbuPUzaD8ndmd04H+1YjF5qSs5D7dcdu8VaA/QTS9ht4vJXzI6OAIfC4VNpoccZqmtB9wFDrflXwbVy5il2kjOOQkWBUu1acmXJQjuW6/irwZYNg7egXy9R0M4RX/ixhJtwp0JqWFbkb3+DLEiHS9P+qSwuj+KJDnMPsJtNa6DRo+TSewFSdJhXtjPQBkN2yIYMR6uNmA75GZMbBwSzoueb3PNfvEizhafy9QpMitWuGgUhMKpca2bNhtQIefJOhdRTHLPMFRvYeTwiwdpQOUnR6oOS7YoQdT2zLTW7mq+PVPlbZsgx/ADqK/Wn0MD+TIT51qCBUYcBwez5O0Pplg"
-  }
+  },
+  "packageRules": [
+    {
+      "matchPackageNames": ["node", "@types/node"],
+      "allowedVersions": "^14"
+    }
+  ]
 }
