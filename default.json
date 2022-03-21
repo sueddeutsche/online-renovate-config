@@ -9,6 +9,10 @@
     {
       "matchPackageNames": ["node", "@types/node"],
       "allowedVersions": "/^14\\..*/"
+    },
+    {
+      "matchPackagePrefixes": ["@technik-sde"],
+      "schedule": "at any time"
     }
   ]
 }
