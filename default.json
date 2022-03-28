@@ -12,6 +12,7 @@
     },
     {
       "matchPackagePrefixes": ["@technik-sde"],
+      "groupName": "technik-sde",
       "schedule": ["at any time"]
     }
   ]
