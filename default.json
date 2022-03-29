@@ -1,5 +1,5 @@
 {
-  "extends": ["config:base", "group:allNonMajor", "schedule:earlyMondays"],
+  "extends": ["config:base"],
   "commitMessagePrefix": "chore: [{{{prettyDepType}}}]",
   "commitMessageExtra": "from v{{{currentVersion}}} to {{#if isMajor}}v{{{newMajor}}}{{else}}{{#if isSingleVersion}}v{{{newVersion}}}{{else}}{{{newValue}}}{{/if}}{{/if}}",
   "encrypted": {
@@ -11,8 +11,11 @@
       "allowedVersions": "/^14\\..*/"
     },
     {
+      "excludePackagePrefixes": ["@technik-sde"],
+      "extends": ["group:allNonMajor", "schedule:earlyMondays"]
+    },
+    {
       "matchPackagePrefixes": ["@technik-sde"],
-      "groupName": "technik-sde",
       "schedule": ["at any time"]
     }
   ]
