@@ -16,7 +16,8 @@
     },
     {
       "matchPackagePrefixes": ["@technik-sde"],
-      "schedule": ["at any time"]
+      "schedule": ["at any time"],
+      "allowedVersions": "!/^.*-rc.*$/"
     }
   ]
 }
