@@ -11,6 +11,10 @@
       "allowedVersions": "/^14\\..*/"
     },
     {
+      "matchPackageNames": ["@opensearch-project/opensearch"],
+      "allowedVersions": "/^1\\..*/"
+    },
+    {
       "excludePackagePrefixes": ["@technik-sde"],
       "extends": ["group:allNonMajor", "schedule:earlyMondays"]
     },
